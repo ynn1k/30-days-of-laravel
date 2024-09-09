@@ -10,25 +10,26 @@
             @method('PATCH')
 
             <div>
-                <label for="title">Job title</label><br>
-                <input type="text" name="title" placeholder="COO of Bullshit" value="{{ $job->title }}">
-                @error('title')
-                <small class="text-red-400 italic">{{ $message }}</small>
-                @enderror
+                <x-form-label for="title">Job title</x-form-label>
+                <br>
+                <x-form-input name="title" placeholder="COO of Bullshit" value="{{ $job->title }}" />
+                <br>
+                <x-form-error name="title" />
             </div>
+
             <div>
-                <label for="salary">Salary</label><br>
-                <input type="text" name="salary" placeholder="12345" value="{{ $job->salary }}">
-                @error('salary')
-                <small class="text-red-400 italic">{{ $message }}</small>
-                @enderror
+                <x-form-label for="salary">Job title</x-form-label>
+                <br>
+                <x-form-input name="salary" placeholder="12345" value="{{ $job->salary }}"/>
+                <br>
+                <x-form-error name="salary" />
             </div>
-            <a href="/jobs/{{ $job->id }}">Cancel</a> | <button form="delete-form">Delete</button> | <button>Update</button>
+
+            <a href="/jobs/{{ $job->id }}">Cancel</a> | <x-form-button form="delete-form">Delete</x-form-button> | <x-form-button>Update</x-form-button>
         </form>
         <form id="delete-form" action="/jobs/{{ $job->id }}" method="post" hidden>
             @csrf
             @method('DELETE')
         </form>
     </div>
-
 </x-layout>

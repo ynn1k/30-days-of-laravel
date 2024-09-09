@@ -3,7 +3,6 @@
 <head>
     <title>layout</title>
     <script src="https://cdn.tailwindcss.com"></script>
-
     <style>
         #layout, #layout div {
             padding: 8px;

@@ -9,28 +9,22 @@
             @csrf
 
             <div>
-                <label for="title">Job title</label><br>
-                <input type="text" name="title" placeholder="COO of Bullshit">
-                @error('title')
-                <small class="text-red-400 italic">{{ $message }}</small>
-                @enderror
+                <x-form-label for="title">Job title</x-form-label>
+                <br>
+                <x-form-input name="title" placeholder="COO of Bullshit" />
+                <br>
+                <x-form-error name="title" />
             </div>
+
             <div>
-                <label for="salary">Salary</label><br>
-                <input type="text" name="salary" placeholder="12345">
-                @error('salary')
-                <small class="text-red-400 italic">{{ $message }}</small>
-                @enderror
+                <x-form-label for="salary">Job title</x-form-label>
+                <br>
+                <x-form-input name="salary" placeholder="12345" />
+                <br>
+                <x-form-error name="salary" />
             </div>
-            <button>Create</button>
-            {{--        --}}
-            {{--        @if($errors->any())--}}
-            {{--            <ul class="italic text-red-400">--}}
-            {{--                @foreach($errors->all() as $error)--}}
-            {{--                    <li>{{ $error }}</li>--}}
-            {{--                @endforeach--}}
-            {{--            </ul>--}}
-            {{--        @endif--}}
+
+            <x-form-button>Create</x-form-button>
         </form>
     </div>
 
