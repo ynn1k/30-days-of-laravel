@@ -2,14 +2,8 @@
 <html>
 <head>
     <title>layout</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        #layout, #layout div {
-            padding: 8px;
-            margin: 8px;
-            outline: dashed 1px #ff000044;
-        }
-    </style>
+
+    @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 <body>
 
