@@ -6,7 +6,7 @@ use App\Models\Job;
 use App\Models\User;
 use Illuminate\Auth\Access\Response;
 
-class JobPolivy
+class JobPolicy
 {
     /**
      * Determine whether the user can view any models.
