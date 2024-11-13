@@ -8,8 +8,10 @@
 
         <h2>{{$job['title']}} pays {{$job['salary']}}</h2>
 
-        <p>
-            <a href="/jobs/{{ $job['id'] }}/edit">Edit</a>
-        </p>
+        @can('edit', $job)
+            <p>
+                <a href="/jobs/{{ $job['id'] }}/edit">Edit</a>
+            </p>
+        @endcan
     </div>
 </x-layout>
